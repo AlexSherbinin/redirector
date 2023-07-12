@@ -2,5 +2,5 @@
     let queryParameters = window.location.search.substring(1).split("&")
     let redirectIndex = queryParameters.findIndex((parameter) => parameter.startsWith("redirect="));
     let redirectTo = queryParameters.splice(redirectIndex, 1)[0].split("=")[1]
-    window.location.href = `${redirectTo}/?${queryParameters.join("&")}`
+    window.location.href = `${redirectTo}/?${queryParameters.join("&")}${window.location.hash}`
 </script>
